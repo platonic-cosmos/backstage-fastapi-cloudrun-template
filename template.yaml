@@ -98,7 +98,7 @@ spec:
       name: Fetch Application Base
       action: fetch:template
       input:
-        url: https://github.com/monkmantra/fastapi-application-template/tree/main/fast-api-skeleton/content
+        url: https://github.com/platonic-cosmos/fastapi-application-template/tree/main/fast-api-skeleton/content
         targetPath: ./app-${{ parameters.app_name }}
         values:
           project_id: ${{ parameters.project_id }}
@@ -113,7 +113,7 @@ spec:
         allowedHosts: ['github.com']
         defaultBranch: main
         description: This is Python FastAPI app ${{ parameters.app_name }} in project ${{ parameters.project_id }}
-        repoUrl: github.com?owner=monkmantra&repo=${{ parameters.app_name }}-app
+        repoUrl: github.com?owner=platonic-cosmos&repo=${{ parameters.app_name }}-app
         repoVisibility: public
         protectDefaultBranch: false
         sourcePath: ./app-${{ parameters.app_name }}
@@ -122,7 +122,7 @@ spec:
       name: Fetch Infra Base
       action: fetch:template
       input:
-        url: https://github.com/monkmantra/terraform-cloudrun-template/tree/main/cloud-run-skeleton/content
+        url: https://github.com/platonic-cosmos/terraform-cloudrun-template/tree/main/cloud-run-skeleton/content
         targetPath: ./terraform-${{ parameters.app_name }}
         values:
           project_id: ${{ parameters.project_id }}
@@ -139,7 +139,7 @@ spec:
         allowedHosts: ['github.com']
         defaultBranch: main
         description: This is cloud run ${{ parameters.app_name }} in ${{ parameters.project_id }}
-        repoUrl: github.com?owner=monkmantra&repo=${{ parameters.app_name }}-iac
+        repoUrl: github.com?owner=platonic-cosmos&repo=${{ parameters.app_name }}-iac
         repoVisibility: public
         protectDefaultBranch: false
         sourcePath: ./terraform-${{ parameters.app_name }}
